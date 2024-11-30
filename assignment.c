@@ -19,21 +19,21 @@ int main(int argc, char *argv[]) {
     // WRITE YOUR CODE HERE
     
     // 1. Check if Number of arguments is == 2
-  if (argc != 3) {
-    printf("Incorrect usage. You provided %d arguments. The correct number of arguments is 2 \n",argc-1);
-    return 1;
-  }
+    if (argc != 3) {
+      printf("Incorrect usage. You provided %d arguments. The correct number of arguments is 2 \n",argc-1);
+      return 1;
+    }
 
   // 2. Check if the Arguments are > 0
 
-  for (int i = 1; i < argc; i++) {
-    int num = atoi(argv[i]);
-    if (num <= 0) {
-        printf("Incorrect usage. The parameters you provided are not positive integers\n");
-        return 1;
+    for (int i = 1; i < argc; i++) {
+      int num = atoi(argv[i]);
+      if (num <= 0) {
+          printf("Incorrect usage. The parameters you provided are not positive integers\n");
+          return 1;
+      }
+      
     }
-    
-  }
 
   // 3. Create Matrix
 
@@ -63,21 +63,21 @@ int main(int argc, char *argv[]) {
  
   // 4. Create Matrix.txt
 
-  FILE *pFile = NULL;
-  pFile = fopen("matrix.txt", "w");
+    FILE *pFile = NULL;
+    pFile = fopen("matrix.txt", "w");
 
-  for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            fprintf(pFile,"%d", matrix[i][j]);
-            if (j < cols - 1) {
-                fprintf(pFile," ");
-            }
-        }
-        fprintf(pFile,"\n");
-    }
+    for (int i = 0; i < rows; i++) {
+          for (int j = 0; j < cols; j++) {
+              fprintf(pFile,"%d", matrix[i][j]);
+              if (j < cols - 1) {
+                  fprintf(pFile," ");
+              }
+          }
+          fprintf(pFile,"\n");
+      }
 
 
-  fclose(pFile);
+    fclose(pFile);
 
 
   return 0;
