@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
     // 1. Check if Number of arguments is == 2
   if (argc != 3) {
     printf("Incorrect usage. You provided %d arguments. The correct number of arguments is 2 \n",argc-1);
-    return 1
+    return 1;
   }
 
   // 2. Check if the Arguments are > 0
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
     int num = atoi(argv[i]);
     if (num <= 0) {
         printf("Incorrect usage. The parameters you provided are not positive integers\n");
-        return 1
+        return 1;
     }
     
   }
