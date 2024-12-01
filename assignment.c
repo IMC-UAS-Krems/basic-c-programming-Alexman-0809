@@ -14,8 +14,6 @@ int main(int argc, char *argv[]) {
 
     int random_number = (rand() % (maxrand - minrand + 1)) + minrand;
 
-
-
     // WRITE YOUR CODE HERE
     
     // 1. Check if Number of arguments is == 2
@@ -46,9 +44,7 @@ int main(int argc, char *argv[]) {
         matrix[i] = malloc(cols * sizeof(int));
         if (matrix[i] == NULL) {
             for (int j = 0; j < i; j++) {
-                free(matrix[j]);
             }
-            free(matrix);
             return 1;
         }
     }
@@ -60,7 +56,6 @@ int main(int argc, char *argv[]) {
         }
     }
     
- 
   // 4. Create Matrix.txt
 
     FILE *pFile = NULL;
@@ -76,9 +71,7 @@ int main(int argc, char *argv[]) {
           fprintf(pFile,"\n");
       }
 
-
     fclose(pFile);
-
 
   return 0;
 }
